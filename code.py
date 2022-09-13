@@ -7,6 +7,19 @@ with open("phonebook_raw.csv") as f:
   contacts_list = list(rows)
 pprint(contacts_list)
 
+class PhoneBook:
+  def __init__(self, lastname, firstname, surname=None, organization=None, position=None, phone=None, email=None):
+      self.lastname = lastname
+      self.firstname = firstname
+      self.surname = surname
+      self.organization = organization
+      self.position = position
+      self.phone = phone
+      self.email = email
+
+  def __str__(self):
+    return f"{self.lastname} {self.firstname} {self.surname}: {self.organization}, {self.position}, {self.phone}, {self.email}"
+
 # TODO 1: выполните пункты 1-3 ДЗ
 # ваш код
 
